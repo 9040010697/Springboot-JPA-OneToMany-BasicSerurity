@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring: 
+  application:
+    name: Springboot-JPA-OneToMany-BasicSerurity
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:mem:auth
+    username: test
+    password: test
+  main:
+    allow-bean-definition-overriding: true
+
+jwt:
+  client:
+    secret: RdGllrHtJ8uX14xRDXvEtp639OsZjVBwMbZiy
+    expire: 3600
+
+#Basic YWRtaW46cGFzc3dvcmQ=
